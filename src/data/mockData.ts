@@ -1,6 +1,44 @@
 import type { AnalysisResult, Candidate, JobDescription } from "@/components/potential/types";
 
-export const sampleJD: JobDescription = {
+export const demoBrand = {
+  name: "璞见",
+  product: "Potential Radar",
+  tagline: "See People, Not Just Keywords.",
+  demoLabel: "Hackathon Frontend Demo",
+};
+
+export const demoResumeBatch = {
+  id: "batch-hackathon-001",
+  source: "Mock 简历批次",
+  uploadedAt: "2026-06-04 20:30",
+  owner: "校招运营团队",
+  resumes: ["C001", "C002", "C003", "C004", "C005", "C006", "C007", "C008"],
+  sampleInput: `C001 陈同学｜社会学｜公众号「AI 田野笔记」18 个月，400+ 访谈整理
+C003 王同学｜汉语言文学｜7 款 AI 写作工具评测，Prompt 模板库 GitHub 200+ star
+C005 周同学｜认知科学｜35 位对话式 AI 用户访谈，LangChain 问答原型
+C007 吴同学｜戏剧影视文学｜播客 42 期，AI 工具线下沙龙复盘文档`,
+};
+
+export const demoFlow = [
+  {
+    title: "上传/输入简历",
+    description: "导入一批候选人简历，Demo 中使用本地 Mock 数据。",
+  },
+  {
+    title: "岗位匹配",
+    description: "先按传统关键词规则筛选，展示会被漏掉的人。",
+  },
+  {
+    title: "潜力分析",
+    description: "从 JD 反推能力画像，再从简历中找证据。",
+  },
+  {
+    title: "推荐理由展示",
+    description: "输出找回原因、能力证据、风险和面试追问。",
+  },
+];
+
+export const defaultJob: JobDescription = {
   id: "jd-001",
   title: "AI 产品运营实习生",
   team: "璞见 · 智能招聘事业部",
@@ -32,7 +70,7 @@ export const sampleJD: JobDescription = {
   ],
 };
 
-export const sampleCandidates: Candidate[] = [
+export const defaultCandidates: Candidate[] = [
   {
     id: "C001",
     alias: "C001",
@@ -162,7 +200,7 @@ export const sampleCandidates: Candidate[] = [
   },
 ];
 
-export const cachedAnalysis: AnalysisResult = {
+export const defaultAnalysis: AnalysisResult = {
   job_profile: {
     core_tasks: [
       "拆解用户访谈与反馈，输出可执行的产品洞察",
@@ -206,7 +244,8 @@ export const cachedAnalysis: AnalysisResult = {
       capability_evidence: [
         {
           capability: "信息整理",
-          evidence_from_resume: "用 Excel + ChatGPT 整理 400+ 份农村教师访谈，输出 30 页洞察报告被采纳",
+          evidence_from_resume:
+            "用 Excel + ChatGPT 整理 400+ 份农村教师访谈，输出 30 页洞察报告被采纳",
           confidence: "high",
         },
         {
@@ -253,7 +292,8 @@ export const cachedAnalysis: AnalysisResult = {
       capability_evidence: [
         {
           capability: "AI 工具使用",
-          evidence_from_resume: "自费购买 7 款 AI 写作产品做横向对比，Prompt 模板库 GitHub 200+ star",
+          evidence_from_resume:
+            "自费购买 7 款 AI 写作产品做横向对比，Prompt 模板库 GitHub 200+ star",
           confidence: "high",
         },
         {
@@ -374,3 +414,7 @@ export const cachedAnalysis: AnalysisResult = {
     },
   ],
 };
+
+export const sampleJD = defaultJob;
+export const sampleCandidates = defaultCandidates;
+export const cachedAnalysis = defaultAnalysis;

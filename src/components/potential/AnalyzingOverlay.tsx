@@ -29,7 +29,9 @@ export function AnalyzingOverlay({ active }: { active: boolean }) {
         <div>
           <div className="text-sm font-semibold text-foreground">潜力雷达扫描中</div>
           <div className="mt-1 h-4 overflow-hidden text-xs text-muted-foreground">
-            <div key={idx} className="animate-fade-up">{messages[idx]}</div>
+            <div key={idx} className="animate-fade-up">
+              {messages[idx]}
+            </div>
           </div>
         </div>
       </div>

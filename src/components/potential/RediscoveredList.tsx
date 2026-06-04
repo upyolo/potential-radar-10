@@ -37,7 +37,9 @@ export function RediscoveredList({
               onClick={() => onSelect(r.candidate_id)}
               className="group flex w-full items-start gap-3 rounded-xl border border-border bg-background/60 p-3 text-left transition hover:border-accent/50 hover:bg-accent-soft/40"
             >
-              <span className={`shrink-0 rounded-md px-2 py-0.5 text-[11px] font-semibold ${lvl.cls}`}>
+              <span
+                className={`shrink-0 rounded-md px-2 py-0.5 text-[11px] font-semibold ${lvl.cls}`}
+              >
                 {lvl.label}
               </span>
               <div className="min-w-0 flex-1">

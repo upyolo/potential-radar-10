@@ -68,14 +68,19 @@ export function CandidateCard({
       </div>
 
       <div className="mt-3 space-y-1 text-xs text-muted-foreground">
-        <div className="truncate">{c.school} · {c.major}</div>
-        <div>{c.grade} · 期望：{c.target}</div>
+        <div className="truncate">
+          {c.school} · {c.major}
+        </div>
+        <div>
+          {c.grade} · 期望：{c.target}
+        </div>
       </div>
 
       <div className="mt-3 flex items-center justify-between border-t border-border/60 pt-3">
         <span className="text-[11px] text-muted-foreground">关键词命中</span>
         <span className="tabular-nums text-sm font-semibold text-foreground">
-          {c.keywordHits}<span className="text-muted-foreground"> / {c.keywordTotal}</span>
+          {c.keywordHits}
+          <span className="text-muted-foreground"> / {c.keywordTotal}</span>
         </span>
       </div>
 

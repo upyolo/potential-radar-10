@@ -15,9 +15,18 @@ export function JDCard({ jd }: { jd: JobDescription }) {
           </Badge>
           <h2 className="text-xl font-semibold text-foreground">{jd.title}</h2>
           <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted-foreground">
-            <span className="inline-flex items-center gap-1"><Users className="h-3.5 w-3.5" />{jd.team}</span>
-            <span className="inline-flex items-center gap-1"><MapPin className="h-3.5 w-3.5" />{jd.location}</span>
-            <span className="inline-flex items-center gap-1"><Briefcase className="h-3.5 w-3.5" />{jd.type}</span>
+            <span className="inline-flex items-center gap-1">
+              <Users className="h-3.5 w-3.5" />
+              {jd.team}
+            </span>
+            <span className="inline-flex items-center gap-1">
+              <MapPin className="h-3.5 w-3.5" />
+              {jd.location}
+            </span>
+            <span className="inline-flex items-center gap-1">
+              <Briefcase className="h-3.5 w-3.5" />
+              {jd.type}
+            </span>
           </div>
         </div>
       </div>

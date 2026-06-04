@@ -1,4 +1,11 @@
-import { PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart, ResponsiveContainer } from "recharts";
+import {
+  PolarAngleAxis,
+  PolarGrid,
+  PolarRadiusAxis,
+  Radar,
+  RadarChart,
+  ResponsiveContainer,
+} from "recharts";
 import type { AnalysisResult } from "./types";
 
 export function CapabilityRadar({ profile }: { profile: AnalysisResult["job_profile"] }) {

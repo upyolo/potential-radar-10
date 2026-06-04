@@ -152,5 +152,46 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-feature-settings: "tnum" 1;
+    background-image:
+      radial-gradient(at 12% 8%, oklch(0.72 0.16 215 / 0.10) 0px, transparent 55%),
+      radial-gradient(at 92% 100%, oklch(0.82 0.16 85 / 0.08) 0px, transparent 55%);
+    background-attachment: fixed;
   }
 }
+
+@utility shadow-glow {
+  box-shadow:
+    0 0 0 1px oklch(0.82 0.16 85 / 0.45),
+    0 10px 40px -10px oklch(0.82 0.16 85 / 0.55),
+    0 0 60px -10px oklch(0.82 0.16 85 / 0.35);
+}
+
+@utility shadow-elegant {
+  box-shadow:
+    0 1px 0 0 oklch(0.91 0.015 250 / 0.6),
+    0 10px 30px -12px oklch(0.18 0.04 250 / 0.12);
+}
+
+@utility radar-bg {
+  background:
+    radial-gradient(circle at center, oklch(0.72 0.16 215 / 0.10), transparent 70%),
+    repeating-radial-gradient(circle at center, transparent 0 28px, oklch(0.38 0.14 255 / 0.08) 28px 29px);
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 0 1px oklch(0.82 0.16 85 / 0.45), 0 0 24px -4px oklch(0.82 0.16 85 / 0.5); }
+  50% { box-shadow: 0 0 0 1px oklch(0.82 0.16 85 / 0.7), 0 0 48px -2px oklch(0.82 0.16 85 / 0.75); }
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes radar-sweep-anim {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@utility animate-glow-pulse { animation: glow-pulse 2.4s ease-in-out infinite; }
+@utility animate-fade-up { animation: fade-up 0.5s ease-out both; }
+@utility animate-radar-sweep { animation: radar-sweep-anim 6s linear infinite; }

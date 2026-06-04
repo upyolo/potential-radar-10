@@ -190,7 +190,8 @@ export function CandidateDrawer({
           </Button>
           {analysis && (
             <Button variant="outline" onClick={copyAll}>
-              <Copy className="mr-1 h-3.5 w-3.5" />复制
+              <Copy className="mr-1 h-3.5 w-3.5" />
+              复制
             </Button>
           )}
         </div>

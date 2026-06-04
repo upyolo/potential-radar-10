@@ -78,14 +78,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "璞见 · See People, Not Just Keywords." },
+      {
+        name: "description",
+        content: "璞见前端 Demo：从简历导入到岗位匹配、潜力分析与推荐理由展示。",
+      },
+      { name: "author", content: "璞见" },
+      { property: "og:title", content: "璞见 · Potential Radar" },
+      { property: "og:description", content: "See People, Not Just Keywords." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:site", content: "@SeePeople" },
     ],
     links: [
       {

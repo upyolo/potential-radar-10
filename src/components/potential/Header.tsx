@@ -1,8 +1,8 @@
 import { Radar, Wifi } from "lucide-react";
+import { demoBrand } from "@/data/mockData";
 
 export function Header({ mode }: { mode: "live" | "cached" | "offline" }) {
-  const modeText =
-    mode === "live" ? "在线模型" : mode === "cached" ? "缓存兜底" : "Offline Demo";
+  const modeText = mode === "live" ? "在线模型" : mode === "cached" ? "缓存兜底" : "Offline Demo";
   const modeColor =
     mode === "live"
       ? "bg-success/15 text-success border-success/30"
@@ -20,10 +20,12 @@ export function Header({ mode }: { mode: "live" | "cached" | "offline" }) {
           </div>
           <div className="leading-tight">
             <div className="flex items-baseline gap-2">
-              <h1 className="text-lg font-semibold tracking-tight text-foreground">璞见</h1>
-              <span className="text-xs text-muted-foreground">Potential Radar</span>
+              <h1 className="text-lg font-semibold tracking-tight text-foreground">
+                {demoBrand.name}
+              </h1>
+              <span className="text-xs text-muted-foreground">{demoBrand.product}</span>
             </div>
-            <p className="text-xs text-muted-foreground">看见关键词之外的真实潜力</p>
+            <p className="text-xs text-muted-foreground">{demoBrand.tagline}</p>
           </div>
         </div>
         <div className="flex items-center gap-2">

@@ -1,13 +1,13 @@
 import { Check } from "lucide-react";
 
-export function ProgressSteps({ stage }: { stage: 0 | 1 | 2 | 3 }) {
-  const steps = ["加载样例数据", "运行传统关键词筛选", "启动潜力雷达 AI 分析"];
+export function ProgressSteps({ stage }: { stage: 0 | 1 | 2 | 3 | 4 }) {
+  const steps = ["上传/输入简历", "岗位匹配", "潜力分析", "推荐理由展示"];
   return (
     <div className="flex flex-wrap items-center gap-3">
       {steps.map((label, i) => {
         const idx = i + 1;
         const done = stage >= idx;
-        const active = stage === idx - 1;
+        const active = stage === idx - 1 || stage === idx;
         return (
           <div key={label} className="flex items-center gap-3">
             <div className="flex items-center gap-2">

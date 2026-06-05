@@ -1,39 +1,33 @@
-import { Radar, Wifi } from "lucide-react";
+import type { ReactNode } from "react";
+import { Radar } from "lucide-react";
 
-export function Header({ mode }: { mode: "live" | "cached" | "offline" }) {
-  const modeText =
-    mode === "live" ? "在线模型" : mode === "cached" ? "缓存兜底" : "Offline Demo";
-  const modeColor =
-    mode === "live"
-      ? "bg-success/15 text-success border-success/30"
-      : mode === "cached"
-        ? "bg-warning/15 text-warning border-warning/40"
-        : "bg-muted text-muted-foreground border-border";
-
+export function Header({
+  flow,
+  actions,
+}: {
+  flow?: ReactNode;
+  actions?: ReactNode;
+}) {
   return (
-    <header className="sticky top-0 z-30 border-b border-border/60 bg-background/75 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+    <header className="sticky top-0 z-30 border-b border-border/60 bg-background/80 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-[1400px] flex-wrap items-center justify-between gap-4 px-6 py-3">
         <div className="flex items-center gap-3">
-          <div className="relative grid h-10 w-10 place-items-center rounded-xl bg-primary text-primary-foreground shadow-elegant">
+          <div className="relative grid h-10 w-10 place-items-center rounded-2xl bg-primary text-primary-foreground shadow-elegant">
             <Radar className="h-5 w-5" />
-            <span className="absolute inset-0 rounded-xl ring-1 ring-primary-glow/40" />
+            <span className="absolute inset-0 rounded-2xl ring-1 ring-primary-glow/40" />
           </div>
           <div className="leading-tight">
             <div className="flex items-baseline gap-2">
               <h1 className="text-lg font-semibold tracking-tight text-foreground">璞见</h1>
-              <span className="text-xs text-muted-foreground">Potential Radar</span>
+              <span className="text-xs font-medium text-muted-foreground">TruePotential</span>
             </div>
-            <p className="text-xs text-muted-foreground">看见关键词之外的真实潜力</p>
+            <p className="text-[11px] font-medium text-primary">See People, Not Just Keywords.</p>
           </div>
         </div>
-        <div className="flex items-center gap-2">
-          <span
-            className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-medium ${modeColor}`}
-          >
-            <Wifi className="h-3 w-3" />
-            {modeText}
-          </span>
-        </div>
+
+        {flow && <div className="order-3 w-full md:order-2 md:w-auto md:flex-1 md:px-6">{flow}</div>}
+
+        <div className="order-2 flex items-center gap-2 md:order-3">{actions}</div>
       </div>
     </header>
   );

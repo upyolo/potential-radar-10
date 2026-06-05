@@ -160,6 +160,34 @@ export const sampleCandidates: Candidate[] = [
 - ACM 区域赛铜牌；
 - 个人 GitHub 维护 2 个 AI 小工具。`,
   },
+  {
+    id: "C009",
+    alias: "C009",
+    name: "冯同学",
+    school: "某二本",
+    major: "电子商务",
+    grade: "大三",
+    target: "AI 产品运营实习生",
+    keywordHits: 1,
+    keywordTotal: 8,
+    resume: `电子商务专业，对内容电商有兴趣。
+- 校内电商社负责人，组织 2 次直播带货活动；
+- 用 Excel 整理过 500+ 商品 SKU。`,
+  },
+  {
+    id: "C010",
+    alias: "C010",
+    name: "蒋同学",
+    school: "某独立学院",
+    major: "工商管理",
+    grade: "大四",
+    target: "AI 产品运营实习生",
+    keywordHits: 0,
+    keywordTotal: 8,
+    resume: `工商管理专业。
+- 校学生会外联部干事；
+- 暑期在某连锁餐饮门店实习 1 个月。`,
+  },
 ];
 
 export const cachedAnalysis: AnalysisResult = {
@@ -193,7 +221,7 @@ export const cachedAnalysis: AnalysisResult = {
   baseline_filter: {
     rules: ["985/211", "GPA 3.5+", "技术专业", "SQL/Python", "大厂实习"],
     passed_candidate_ids: ["C002", "C006", "C008"],
-    filtered_candidate_ids: ["C001", "C003", "C004", "C005", "C007"],
+    filtered_candidate_ids: ["C001", "C003", "C004", "C005", "C007", "C009", "C010"],
   },
   rediscovered_candidates: [
     {

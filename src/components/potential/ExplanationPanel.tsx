@@ -28,20 +28,10 @@ export function ExplanationPanel({
   onJoin: (id: string) => void;
   onSkip: (id: string) => void;
 }) {
-  if (stage < 3) {
-    return (
-      <PanelShell>
-        <EmptyState stage={stage} />
-      </PanelShell>
-    );
-  }
-
   if (!candidate) {
     return (
       <PanelShell>
-        <div className="grid h-full place-items-center px-6 py-10 text-center text-xs text-muted-foreground">
-          点击中间任意候选人卡片，查看 AI 解释
-        </div>
+        <EmptyState stage={stage} />
       </PanelShell>
     );
   }
